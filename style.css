@@ -1,4 +1,7 @@
-/*kolory siwy #E0E0E0, róź #FFCCFF, biel #FFFFFF*/
+/*kolory siwy #E0E0E0, róź #FFCCFF, biel #FFFFFF* zolty FFFF99, jasny pomar #FFCC00*/
+
+/*bazowe kolory Róz :  #FF0099      Niebieski: #0099FF*/
+/* zielony #FF0099*/
 body
 {
 	background-color: #FFFFFF;
@@ -7,6 +10,7 @@ body
 	box-sizing:border-box;
 	font-family: 'Coda', cursive;
 }
+
 #kontener
 {
 	width:100%;
@@ -20,7 +24,7 @@ body
 	line-height:40px;
 	z-index:100;
 	background-color:white;
-	border:5px solid #FFCCFF;
+	border:5px solid grey;
 	border-radius:50%;
 	position:fixed;
 	bottom:20px;
@@ -35,38 +39,67 @@ body
 	cursor:pointer;
 	color:grey;
 }
-#gornaBelka
+#home
 {
 	width:100%;
-	height:400px;
-	background-image:url("img/wellness575.jpg");
-	background-repeat:no-repeat;
-	background-position:center;
-	background-size:cover;/* nie wiem czy konieczne, przy wiekszej wielkosci rozmazane*/
+	box-sizing:border-box;
+	color:white;
 	text-align:center;
-	font-size:12px;
-	color:#FFFFFF;
-	position:relative;
-}
-h1.napisyLogo
-{
-	font-family: 'Parisienne', cursive;
-	font-size:26px;
-	text-shadow:2px 2px 2px black;
-	position:absolute;
-	top:10px;
-	left:5px;
 	padding:10px;
 }
+
+#homeLotos
+{
+	display:inline-block;
+	display:none;
+}
+#homeIntro
+{
+	display:inline-block;
+}
+
+#homeKontakt
+{
+	color:#9C9C9C;
+	padding:10px;
+	font-size:18px;
+	letter-spacing:2px;
+}
+#homeKontakt a
+{
+	color:black;
+}
+
+h1.napisyLogo
+{
+	color:#000000;
+	letter-spacing:2px;
+	font-family:  'Cutive Mono', monospace;
+	font-size:30px;
+	/*text-shadow:2px 2px 2px #0099FF;*/
+	margin:0;
+	padding:10px;
+}
+h2.napisyLogoMale
+{
+	color:grey;
+}
+.napisyLogoMale
+{
+	font-size:16px;
+	margin:0;
+	padding-bottom:10px;
+	letter-spacing:2px;
+}
+
+
 h2.nrTelLogo
 {
-	font-family: 'Parisienne', cursive;
-	font-size:23px;
-	font-weight:550;
+	font-family:  'Cutive Mono', monospace;
+	font-size:25px;
+	letter-spacing:3px;
 	text-shadow:2px 2px 2px black;
-	position:absolute;
-	bottom:10px;
-	left:25%;
+	margin-bottom:10px;
 }
 #nawigacjaGlowna
 {
@@ -89,7 +122,7 @@ h2.nrTelLogo
 {
 	opacity:0.7;
 	cursor:pointer;
-	
+
 }
 .napisMenu
 {
@@ -115,7 +148,7 @@ ul.elementyNawigacji
 }
 ul.elementyNawigacji li
 {
-	padding:10px;
+	padding:20px;
 	border-bottom:5px solid grey;
 	border-radius:10px 0px;
 	letter-spacing:3px;
@@ -134,29 +167,71 @@ ul.elementyNawigacji li a:hover
 }
 .powitanie
 {
+	box-sizing:border-box;
 	width:80%;
 	margin:auto;
 	margin-bottom:40px;
 	padding:30px;
 	/*background-color:#FFCCFF;*/
-	background:linear-gradient(#FFCCFF, white);
+	/*background:linear-gradient(#FFCC00, white);*/
 	text-align:center;
-	font-family: 'Parisienne', cursive;
-	font-size:30px;	
-	box-shadow:1px 2px 2px black;
+	font-family: 'Cutive Mono', monospace;
+	font-size:24px;
 	text-shadow:2px 2px 2px grey;
-	border-radius:5px;
+	border-top:4px solid #FF0099;
+	border-left:2px solid #FF0099;
+	border-bottom:4px solid #0099FF;
+	border-right:2px solid #0099FF;
+	border-radius:2px;
 	/*display:none;*/
 }
 
+	#bicomIntro
+	{
+		box-sizing:border-box;
+		width:100%;
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+		margin-bottom:10px;
+		padding:5px;
+
+	}
+	#bicomText
+	{
+		width:50%;
+		padding:10px;
+		padding-left:10px;
+	}
+	#bicomText ul
+	{
+		list-style-image: url("img/faja.png");
+	}
+	#bicomText ul li
+	{
+		letter-spacing:2px;
+		padding:3px;
+		font-size:16px;
+	}
+	#bicomFoto
+	{
+		width:50%;
+	}
+	#bicomFoto img
+	{
+		width:90%;
+	}
+
+
 .ikonaMasaz
 {
+	background-color:#3399CC;
 	width:80%;
 	height:auto;
 	margin:auto;
-	background-color:#FFCCFF;
-	font-family: 'Playball', cursive;
-	font-size:18px;
+	font-family:'Cutive Mono', monospace;
+	font-size:22px;
+	letter-spacing:2px;
 	font-weight:700;
 	margin-bottom:20px;
 	border-radius:8px;
@@ -166,10 +241,16 @@ ul.elementyNawigacji li a:hover
 }
 .ikonaMasaz img
 {
-	
+
 	width:100%;
 	height:auto;
 }
+
+	.opisHover
+{
+	display:none;
+}
+
 .opisUslugiMasaz, .opisUslugiOdczulanie
 {
 	width:80%;
@@ -178,6 +259,7 @@ ul.elementyNawigacji li a:hover
 	text-align:justify;
 	font-size:15px;
 	display:none;
+
 }
 hr
 {
@@ -185,12 +267,13 @@ hr
 }
 .ikonaAlergia
 {
+	background-color:#FF0099;
 	width:80%;
 	height:auto;
 	margin:auto;
-	background-color:#FFCCFF;
-	font-family: 'Playball', cursive;
-	font-size:20px;
+	font-family: 'Cutive Mono', monospace;
+	font-size:22px;
+	letter-spacing:2px;
 	font-weight:700;
 	margin-bottom:30px;
 	border-radius:8px;
@@ -209,28 +292,89 @@ hr
 	width:100%;
 }
 
-#zdjecieBicom
+.zdjecieBicom
 {
 	width:70%;
 	margin:auto;
 	margin-bottom:20px;
 }
-#zdjecieBicom img
+.zdjecieBicom img
 {
 	width:100%;
 	border-radius:4px;
 }
+
+#terapie
+{
+	width:100%;
+	background-color:white;
+	padding-bottom:10px;
+	padding-top:20px;
+}
+
+.terapieKafelek
+{
+	width:90%;
+	background-color: #F6F6F6;
+	padding:10px;
+	border:1px solid black;
+	border-radius:8px;
+	margin:auto;
+	text-align: justify;
+	margin-bottom:10px;
+	box-shadow: 2px 2px 2px 2px grey;
+}
+.terapiaObrazek
+{
+	text-align: center;
+}
+.terapieKafelek img
+{
+	width:50%;
+	margin:0 auto;
+	border-radius: 50%;
+}
+.terapieKafelek h3
+{
+	text-align: center;
+}
+.terapieKafelek a
+{
+	text-decoration:none;
+	color:black;
+}
+/*podstrona rzucpalenie itp*/
+.terapieOpis
+{
+	width:80%;
+	background-color: #F6F6F6;
+	padding:20px;
+	border:1px solid black;
+	border-radius:8px;
+	margin:auto;
+	text-align: justify;
+	letter-spacing: 2px;
+	margin-bottom:20px;
+	box-shadow: 2px 2px 2px 2px grey;
+}
+.terapieOpis img
+{
+	width:80%;
+	border-radius: 50%;
+}
+
 #cennik
 {
-	background-color:#FFCCFF;
+	/*background-color:#FFCC00;*/
+	background-color: silver;
 	width:80%;
 	padding:20px;
 	margin:auto;
 	margin-bottom:50px;
 	border-radius:5px;
 	box-shadow:3px 2px 2px 2px grey;
-	font-weight:bold;
 	position:relative;
+	letter-spacing:2px;
 }
 .napisCennik
 {
@@ -239,7 +383,7 @@ hr
 	margin-bottom:20px;
 	text-align:center;
 	font-family: 'Playball', cursive;
-	color:#FFFFFF;
+	color:white;
 	text-shadow:2px 2px 2px #000000;
 }
 #strzalkaDol
@@ -260,10 +404,11 @@ hr
 }
 .cena
 {
-	color:grey;
+	color:#0099FF;
 	font-weight:bold;
 	text-shadow:1px 1px 1px silver;
 	font-size:17px;
+	text-shadow:1px 1px 1px white;
 }
 .uslugiCennik
 {
@@ -280,17 +425,19 @@ hr
 .masazeCennik, .alergiaCennik, .odczulanieCennik
 {
 	display:none;
+	list-style-image:url("favicon-32x32.png");
 }
+
 
 #tloWellness
 {
-	background-image:url("img/wellness.jpg");
+	background-image:url("img/mlecz.jpg");
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-attachment:fixed;
 	background-position:center;
 	width:100%;
-	height:500px;
+	height:600px;
 }
 #tloWellness2
 {
@@ -302,7 +449,7 @@ hr
 	width:100%;
 	height:500px;
 }
-#reklama
+#coLeczymy
 {
 	width:100%;
 	background-color:#FFFFFF;
@@ -313,21 +460,21 @@ hr
 	font-size:14px;
 	/*border-top:10px dashed black;*/
 }
-#reklama ul
+#coLeczymy ul
 {
 	list-style-type:none;
 	padding:0;
 }
-#reklama ul li
+#coLeczymy ul li
 {
-	margin-bottom:15px;
+	margin-bottom:20px;
 	border-radius:2px;
 	padding:10px;
-	border-right:3px solid #FFCCFF;
-	border-bottom:3px solid #FFCCFF;
+	border-right:3px solid #0099FF;
+	border-bottom:3px solid #0099FF;
 	/*background-color:#E6E6E6;*/
 }
-#reklama h2
+#coLeczymy h2
 {
 	padding:10px;
 	font-size:24px;
@@ -340,14 +487,14 @@ hr
 	padding:10px;
 	letter-spacing:2px;
 }
-.napisReklama
+.napiscoLeczymy
 {
 	width:90%;
 	height:80px;
 	margin:0 auto;
 	margin-bottom:20px;
 }
-.elementyReklamy
+.elementycoLeczymy
 {
 	color:grey;
 	font-weight:bold;
@@ -376,17 +523,21 @@ hr
 	margin:auto;
 	margin-bottom:28px;
 }
-.zdjecieKwiatLotos
+#oMnieSkok ul
+{
+	list-style-position:inside;
+}
+.certyfikat
 {
 	margin:auto;
 	margin-top:20px;
 	margin-bottom:20px;
-	width:60%;
+	width:85%;
+	box-shadow:1px 1px 1px 1px grey;
 }
-.zdjecieKwiatLotos img 
+.certyfikat img
 {
 	width:100%;
-	border-radius:50%;
 }
 .czcionkaPismoOdreczne
 {
@@ -400,14 +551,20 @@ hr
 	height:100%;
 	text-align:center;
 	font-size:14px;
-	background-color:#0E0E0E;
+	background: radial-gradient(#191919, black);
 	color:#DADADA;
 	border-top:2px solid grey;
-	font-family: 'Playball', cursive;
+	font-family:  'Cutive Mono', monospace;
 	padding:10px;
 }
+h2.napisyLogo
+	{
+		text-shadow:2px 2px 2px #0099FF;
+	}
+
 .mapaGoogle
 {
+	margin-top:10px;
 	width:100%;
 	border-radius:10px;
 }
@@ -420,19 +577,20 @@ footer
 }
 p.name
 {
-	font-size:20px;
+	font-size:24px;
 	letter-spacing:2px;
 }
+
 .activeClass
 {
-	border:3px solid silver;
-	transform:scale(0.9);
+	border:5px inset grey;
 	transition-duration:0.5s;
+	color:white;
 }
 @keyframes zmienKolor
 {
 	0%{color:white;font-size:22px;}
-	50%{color:#FFCCFF; font-size:24px;}
+	50%{color:#FF0099; font-size:24px;}
 	100%{color:white;font-size:22px;}
 }
 /*style do efektu parallax*/
@@ -443,20 +601,48 @@ p.name
 .show {
 	opacity: 1;
 }
-/*MEDIA*/
-@media only screen and (min-width:768px) 
+/*MEDIA*/ /***************************************************/
+@media only screen and (min-width:768px)
 {
 	body
 	{
 		box-sizing:border-box;
 	}
+
+	#home
+	{
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+	}
+	#homeLotos
+	{
+		display:block;
+		width:15%;
+	}
+	#homeLotos img
+	{
+		width:100%;
+	}
+
+		.napisyLogoMale
+	{
+		letter-spacing:5px;
+	}
+
+
 	#gornaBelka
 	{
-		background-image:url("img/wellness2.jpg");
+		background-image:url("img/alergy.jpg");
+		height:450px;
 	}
 	#menuLotos
 	{
 		display:none;
+	}
+	h1.napisyLogo
+	{
+		font-size:46px;
 	}
 	.napisMenu
 	{
@@ -466,7 +652,28 @@ p.name
 	{
 		margin-top:30px;
 		transition: all 2s ease;
+		font-size:36px;
 	}
+	#bicomIntro
+	{
+		padding:20px;
+	}
+	#bicomText
+	{
+		width:40%;
+		padding-left:30px;
+		letter-spacing:10px;
+		font-size:25px;
+	}
+	#bicomText ul li
+	{
+		font-size:30px;
+	}
+	#bicomFoto
+	{
+		width:60%;
+	}
+
 	ul.elementyNawigacji
 	{
 		width:100%;
@@ -482,34 +689,57 @@ p.name
 		padding:0px;
 		margin-top:10px;
 		margin-right:1px;
-		border-bottom:2px solid grey;
-		border-right:2px solid grey;
+		border-bottom:2px solid silver;
+		border-right:2px solid silver;
 		border-radius:3px;
-		font-size:12px;
+		font-size:15px;
 		letter-spacing:1px;
 		font-weight:bold;
+		transition:0.3s;
 	}
 	ul.elementyNawigacji li:hover
 	{
-		box-shadow:4px 7px 7px #FFCCFF;
-		transition:0.3s;
+		box-shadow:4px 3px 7px #0099FF;
 		border-bottom:2px solid black;
 		border-right:2px solid black;
 	}
 	ul.elementyNawigacji li a:hover
 	{
-		color:grey;
+		color:#1F1F1F;
 		font-weight:400;
 	}
-	
-	
+
+
 	.ikonaMasaz
 	{
 		width:40%;
-		height:auto;
+		height:20em;
 		margin:auto;
-		background-color:#FFCCFF;
-		font-family: 'Playball', cursive;
+		font-family: 'MissFaiardose', cursive;
+		font-size:20px;
+		font-weight:700;
+		margin-bottom:20px;
+		margin-left:10px;
+		border-radius:8px;
+		text-align:center;
+		box-shadow:2px 2px 2px 2px black;
+		overflow:hidden;
+		display:inline-block;
+		transition:all 0.5s linear;
+	}
+
+	.ikonaMasaz img
+	{
+		width:100%;
+		height:100%;
+	}
+
+		.ikonaAlergia
+	{
+		width:40%;
+		height:20em;
+		margin:auto;
+		font-family: 'MissFaiardose', cursive;
 		font-size:20px;
 		font-weight:700;
 		margin-bottom:20px;
@@ -519,85 +749,212 @@ p.name
 		box-shadow:2px 2px 2px 2px black;
 		overflow:hidden;
 		display:inline-block;
+		transition:all 0.5s linear;
+		position:relative;
 	}
-		
-		.ikonaAlergia
+
+	.ikonaAlergia img
 	{
-		width:40%;
-		height:auto;
-		margin:auto;
-		background-color:#FFCCFF;
-		font-family: 'Playball', cursive;
-		font-size:20px;
-		font-weight:700;
-		margin-bottom:30px;
-		margin-left:10px;
-		border-radius:8px;
-		text-align:center;
-		box-shadow:2px 2px 2px 2px black;
-		overflow:hidden;
-		display:inline-block;
+		width:100%;
+		height:100%;
 	}
-	
-	.ikonaAlergia:hover,
-	.ikonaMasaz:hover
+
+	.ikonaAlergia:hover .opisHover,
+	.ikonaMasaz:hover .opisHover
 	{
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		width:100%;
+		height:100%;
+		opacity:0.5;
+		z-index:1000;
+		position:absolute;
+		text-shadow:2px 2px 2px white;
+		top:0;
+		left:0;
 		cursor:pointer;
-		box-shadow:4px 4px 4px 2px #0E0E0E;
+		font-size:30px;
+		text-transform:uppercase;
 	}
-	
+
+	.ikonaAlergia:hover .opisHover
+	{
+		background-color:#FF0099;
+	}
+
+	.ikonaMasaz:hover .opisHover
+	{
+		background-color:#3399CC;
+	}
+
 		.opisUslugiMasaz, .opisUslugiOdczulanie
 	{
 		font-size:16px;
 	}
-		
+
+
+
+	#terapie
+	{
+		width:100%;
+		display:flex;
+		flex-wrap:wrap;
+		align-items: center;
+		justify-content: space-around;
+		padding-top:40px;
+	}
+
+	.terapieKafelek
+	{
+		background-color: #F6F6F6;
+		padding:10px;
+		border:1px solid black;
+		border-radius:8px;
+		margin:auto;
+		text-align: justify;
+		letter-spacing: 2px;
+		margin-bottom:20px;
+		box-shadow: 2px 2px 2px 2px grey;
+		flex-basis:38%;
+		transition:0.5s;
+	}
+	.terapieKafelek:hover
+	{
+		box-shadow: 0 0 10px rgba(0,0,0,1),
+								0 0 20px rgba(0,0,0,1),
+								0 0 30px rgba(0,0,0,1),
+								0 0 75px rgba(0,0,0,0.05),
+								0 0 60px rgba(0,0,0,0.05),
+								0 0 45px rgba(0,0,0,0.05),
+								0 0 15px rgba(0,0,0,0.05);
+		cursor:pointer;
+		color:#3399CC;
+		transform: scale(1.1);
+	}
+/*	.terapieKafelek:nth-of-type(2)
+	{
+		flex-basis:90%;
+	}*/
+	.terapiaObrazek
+	{
+		text-align: center;
+	}
+	.terapieKafelek img
+	{
+		width:50%;
+		margin:0 auto;
+		border-radius: 50%;
+	}
+.terapieKafelek p
+	{
+		display:none;
+	}
+	.terapieKafelek h3
+	{
+		text-align: center;
+	}
+
+	.activeTerapy
+	{
+			flex-basis:90%;
+			display:block;
+	}
+
+	.terapieOpis
+	{
+		width:85%;
+		background-color: #F6F6F6;
+		padding:10px;
+		border:1px solid black;
+		border-radius:8px;
+		margin:auto;
+		text-align: justify;
+		letter-spacing: 2px;
+		margin-bottom:20px;
+		box-shadow: 2px 2px 2px 2px grey;
+		flex-basis:38%;
+		transition:0.5s;
+	}
+	.terapieOpis img
+	{
+		width:40%;
+	}
+
 	#uslugi
 	{
 		width:100%;
 		margin:auto;
 		text-align:center;
 	}
+
+
+	#cennik
+	{
+		font-size:20px;
+	}
 	#cennik:hover
 	{
 		cursor:pointer;
-		opacity:0.8;
+		opacity:0.9;
 	}
-	
+	.cena
+	{
+		font-size: 22px;
+	}
 	.napisCennik h1
 	{
 		font-size:40px;
 		letter-spacing:1px;
 	}
+
+	#coLeczymy
+	{
+		font-size:18px;
+	}
+
 	#oMnieSkok h1
 	{
-		font-size:40px;
+		font-size:44px;
 		letter-spacing:2px;
 	}
-	
+	#oMnieSkok
+	{
+		font-size:18px;
+	}
+
 	#strzalkaDol:hover
 	{
 		transform:scale(1.1);
 		transition:transform 0.5s ease-in-out;
 	}
-	
-	.zdjecieKwiatLotos
+
+	.certyfikat
 	{
 		margin:auto;
 		margin-top:20px;
 		margin-bottom:20px;
-		width:35%;
+		width:50%;
 	}
-	.zdjecieKwiatLotos img 
+	.certyfikat img
 	{
 		width:100%;
 		height:auto;
-		border-radius:50%;
 	}
-	
+
 	#daneKontaktowe
 	{
-		font-size:18px;
+		font-size:20px;
 	}
+
+
+		@keyframes zmienKolor
+	{
+		0%{color:white;font-size:36px;}
+		50%{color:#FF0099; font-size:40px;}
+		100%{color:white;font-size:36px;}
+	}
+
 }
 
 
